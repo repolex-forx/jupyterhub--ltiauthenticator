@@ -1,1 +1,140 @@
-Initializing
+# Repolex Knowledge Graph of jupyterhub/ltiauthenticator
+
+RDF knowledge graph data for [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download jupyterhub/ltiauthenticator
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── c0c3bf3a7a12f81fe09ad858a102a3d6a17fe5d7
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── c0c3bf3a7a12f81fe09ad858a102a3d6a17fe5d7
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 00ee92930321d143b9fc15a53c7814b10775c189.nq.gz
+│   ├── 033d9d4c82a4ca9de57805527753d02a3ba0b6f7.nq.gz
+│   ├── 06553d6d473f6c5286c3c58a25cc22dda0cb116c.nq.gz
+│   ├── 0abb0aaa54bf2ebf0b004c63d5bca048545ca7f8.nq.gz
+│   ├── 0de614453acc41cb4526d1bc55f1a01f6e66b5e6.nq.gz
+│   ├── 0ead5dfd41eab66fc264a60084664003b94c2880.nq.gz
+│   ├── 1515126e4743bd7ec3f802781dd0da23f4d40b0f.nq.gz
+│   ├── 1752f4b1c0e6c63fd0a4a33cc652f7671a73fc7b.nq.gz
+│   ├── 1fb5cec9353e1cbac2af7aa992356eb7c36b3929.nq.gz
+│   ├── 2c345941827b50f7b2fb9ade3fface489efe4999.nq.gz
+│   ├── 303029fc6ca8d69ea7264f270857cda6e814f237.nq.gz
+│   ├── 33867c4ee6c4a87758bceb952fe7f03f308247cd.nq.gz
+│   ├── 38e676843ae3c0caf9bf1ae0fb3fa66f075fdec9.nq.gz
+│   ├── 4aec73d4cf8d9df75b8be12bd720e3cbeaa235f7.nq.gz
+│   ├── 4b0ad5d6cfcf4b69df2cdd654cdb0b5fb69360bc.nq.gz
+│   ├── 4bebe23f28342e2fcca998f11b072ad7671d92dd.nq.gz
+│   ├── 54e97c4cb8e82a2325ce79f07edd47c0961a7fba.nq.gz
+│   ├── 5857a68c78212de1894e38fac6fb4e1272928666.nq.gz
+│   ├── 5ac5b090401c35310481b29e1fa8ce8ced9d6f7a.nq.gz
+│   ├── 5da11561712206ab86ec2546527f0c2a5a8ddc9c.nq.gz
+│   ├── 5df98ce5e1a7308f6e0aa5dc0337a097210b7f32.nq.gz
+│   ├── 5f132ffd32813434948af056613a5cc6ee020c5a.nq.gz
+│   ├── 628b41bcc8ee6e58bb382e0ceb48fc7e76b61f9f.nq.gz
+│   ├── 66b995f8307d922325a46b56f27d29469af73433.nq.gz
+│   ├── 73248150ef6361b6b0845c687e00add710bffdd5.nq.gz
+│   ├── 750ec4c5f95341dc3185970f0e5df476b51d4775.nq.gz
+│   ├── 7b366172059772d49871903ed978a4c8787a525b.nq.gz
+│   ├── 83d4aba5b439477e7d633301e8e3e81817ef4b6d.nq.gz
+│   ├── 8aad892c345cf0a2b58157671ff5049df5da895f.nq.gz
+│   ├── 8ce8b48a86137de8c194f17c20bec963266a7029.nq.gz
+│   ├── 8d36d67b24924ae615f561b719c111345c82be71.nq.gz
+│   ├── 9678f9852ebf9fd89a2037116ecc331a2151349b.nq.gz
+│   ├── 96f5ed39b29a769923ae56d3feb4ff63c42ed4d3.nq.gz
+│   ├── a660766627deaf28668dc304e5926d9a3cb650eb.nq.gz
+│   ├── a7a4e61b76ef38ddfc30a3e157aaae6674120bdf.nq.gz
+│   ├── a85131782fa42c795408967cf303299c2750d529.nq.gz
+│   ├── a8f748160c0a57b69092ffb62f80d3a1a42452e2.nq.gz
+│   ├── ad8495ad976cc028cd163b995cbbf1cea96f0e64.nq.gz
+│   ├── af9720d08a47e5bd8eccddf69fd980c43080a126.nq.gz
+│   ├── b3b4b4a4176b1c6ef14681f9894ef4843fae2732.nq.gz
+│   ├── b3ce16ea7e735e94f2801bc4747c33f61ae188bd.nq.gz
+│   ├── b3eda45fc068b2f17dcc5d3908721566b0f8c008.nq.gz
+│   ├── b8e71afc4abe8057538e512b98cc49b91e5e61c4.nq.gz
+│   ├── bb75936bbffdc927c9a98e10f85c14ba4b24d1db.nq.gz
+│   ├── c4a9c975a8e138af6f95d49809eb34b6077bc03a.nq.gz
+│   ├── ca47620a6fb20ae73797a9d094547a22080cb6b2.nq.gz
+│   ├── cccd3953432fd88e30949472be3fb8c6695bd90a.nq.gz
+│   ├── cdb588ded871ae4fa5fb22c223cca13a13cd6b17.nq.gz
+│   ├── d2d6a7802299c09e97c41469ed4aa606a98a2005.nq.gz
+│   ├── d3f2f2a4939619c42b11af4fbe5a648156e9bc8c.nq.gz
+│   ├── d8e38410a77345bb6b71fda04b6dedd3f03abae8.nq.gz
+│   ├── e2f21a4dc2f0b24523aafdf5178de5bead9e1cec.nq.gz
+│   ├── e62efee99a6983f1e215646c275fc0c66767e91c.nq.gz
+│   ├── e68ab10f160d40ee194a6faa2b3e958e74c65ad7.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e82a5f73ded108a8159bbf4df4a8321370a0905c.nq.gz
+│   ├── ea48d3d8d3f2cb0a6b7887ad883d1eaafdb79d3a.nq.gz
+│   ├── f0450bed7402942d6916ae459b77a246f873e92f.nq.gz
+│   ├── f064a4b5d56444caaf8916ae7d002ce5a03e0e83.nq.gz
+│   ├── fc5bb7265ffb3831ed425f6b7588bd7e27c43b21.nq.gz
+│   └── ffdf84e2314ca24a8b508642368dbba3bc61c7cc.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── c0c3bf3a7a12f81fe09ad858a102a3d6a17fe5d7.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 69 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator)
+
+---
+*Parsed on 2026-10-21 by [repolex](https://repolex.ai)*

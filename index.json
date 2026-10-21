@@ -1,0 +1,11 @@
+{
+  "org": "jupyterhub",
+  "repo": "ltiauthenticator",
+  "versions": [
+    {
+      "commit": "c0c3bf3a7a12f81fe09ad858a102a3d6a17fe5d7",
+      "tag": "",
+      "parsed_at": "2026-10-21T22:19:48.044016+00:00"
+    }
+  ]
+}
